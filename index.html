@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>❤️ 7 Meses de puro Amor ❤️</title>
+    <title>❤️ 9 Meses y Rumbo al Matrimonio ❤️</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         body {
@@ -25,6 +25,15 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
+        .action-button {
+            display: inline-block; margin-top: 20px; padding: 14px 25px;
+            background: linear-gradient(135deg, #ff4081, #ff6f00); color: white; text-decoration: none;
+            border-radius: 30px; font-weight: bold; font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s; border: 2px solid white;
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+        }
+        .action-button:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(255, 64, 129, 0.6); }
+
         .youtube-link {
             display: inline-block; margin-top: 15px; padding: 10px 20px;
             background: #ff0000; color: white; text-decoration: none;
@@ -33,73 +42,33 @@
         }
         .youtube-link:hover { transform: scale(1.1); background: #c00000; }
 
-        #game-container {
-            width: 100%; height: 280px; margin: 15px auto; 
-            background: rgba(255, 255, 255, 0.05); 
-            border: 2px dashed rgba(255, 255, 255, 0.3);
-            border-radius: 20px; position: relative; overflow: hidden;
-            touch-action: none;
-        }
-
-        .game-item { position: absolute; font-size: 2.8rem; cursor: pointer; z-index: 5; }
-
-        #surprise-image-container {
-            display: none; position: absolute; top: 0; left: 0;
-            width: 100%; height: 100%; z-index: 20; background: #000;
-        }
-
-        #surprise-image-container img { width: 100%; height: 100%; object-fit: cover; }
-
-        #premio-ticket {
-            display: none; background: #fff; color: #333;
-            padding: 20px; border-radius: 15px; border: 4px dashed #ff4081;
-            margin-top: 20px; box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-            animation: popIn 0.5s ease-out;
-        }
-
-        @keyframes popIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
         .contador-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin-top: 10px; margin-bottom: 20px; }
         .tiempo-item {
             background: rgba(255, 255, 255, 0.1); padding: 8px;
             border-radius: 12px; min-width: 55px; border: 1px solid rgba(255,255,255,0.1);
         }
         .numero { display: block; font-size: 1.1rem; font-weight: bold; color: #ffb3c1; }
-        h2 { font-size: 1.3rem; margin-top: 20px; color: #ffeb3b; }
-        
-        #boda-anillo { cursor: pointer; display: inline-block; transition: all 0.3s; font-size: 1.8rem; }
+        h2 { font-size: 1.3rem; margin-top: 25px; color: #ffeb3b; }
     </style>
 </head>
 <body>
 
     <div class="content">
-        <h1>❤️ Feliz 7 Meses Vida Mia ❤️</h1>
+        <h1>❤️ Feliz 9 Meses y Comprometidos ❤️</h1>
 
         <div class="dedicatoria-box">
-        <p style="font-size: 1.05rem; line-height: 1.5;">
-                  "Hola mi corazón bello mío, agradezco enormemente el tiempo que has estado junto a mí, agradezco también el amor que me has brindado, el apoyo, la comprensión y mucho más. Sin duda eres esa persona que querré en mi vida en todo momento, mi amor. Te Amo muchito mi vidita mía. Ahora ya no hay trivia. Solo hay una sola pregunta en la cual tú tendrás que escoger. Suerte mi vida. <span id="boda-anillo">💍</span>"
+            <p style="font-size: 1.05rem; line-height: 1.5;">
+                "Mi amor bello, ya son 9 meses desde que comenzó esta hermosa historia y un nuevo capítulo con nuestra promesa de matrimonio. Gracias por cada risa, cada momento compartido y por ser la persona con la que quiero construir toda mi vida. Para preparar nuestro próximo gran viaje juntos y nuestra luna de miel, necesito que respondas con calma la siguiente encuesta de películas. ¡Te amo con todo mi corazon mamita, Te Amo María Constanza! 💍✨"
             </p>
 
             <a href="https://www.youtube.com/watch?v=sKoK3XnTd3g" target="_blank" class="youtube-link">
                 🎵 Haz clic aquí para nuestra canción
             </a>
 
-            <div id="premio-ticket">
-                <h3 style="margin: 0; color: #ff4081;">🎉 ¡PREMIO DESBLOQUEADO! 🎉</h3>
-                <p style="font-size: 0.9rem; margin: 10px 0;">Este ticket es válido por un segundo premio sorpresa que aparecerá cualquier día que estés en Chile ya que tienes uno este sera el segundo.</p>
-                <div style="font-weight: bold; font-size: 1.1rem; border-top: 1px solid #ccc; padding-top: 10px;">
-                    CÓDIGO: AMOR-Num2-CHILE-2026
-                </div>
-                <p style="font-size: 0.8rem; color: #666; margin-top: 5px;">📸 Saca una captura de pantalla ahora.</p>
-            </div>
-
-            <p style="font-weight: bold; color: #ffb3c1; margin-top: 25px; font-size: 0.9rem;">¡Atrapa 20 ❤️! (🍎 restan puntos)</p>
-            <div style="font-size: 1.2rem; color: #ffeb3b; font-weight: bold;">Puntos: <span id="current-score">0</span> / 20</div>
-
-            <div id="game-container">
-                <div id="surprise-image-container">
-                    <img src="sorpresa.jpg" alt="Sorpresa">
-                </div>
+            <div style="margin-top: 20px;">
+                <a href="https://docs.google.com/forms/d/1zqeIdj0c0JWabyI3GRJHGTdKEE5HwhE4SSVeft5QeaE/edit" target="_blank" class="action-button">
+                    🎬 Responder Encuesta Luna de Miel ✈️
+                </a>
             </div>
 
             <h2>Tiempo Juntitos</h2>
@@ -120,12 +89,12 @@
                 <div class="tiempo-item"><span class="numero" id="seg-b">0</span>Seg</div>
             </div>
 
-            <h2>Para nuestros 8 meses...</h2>
+            <h2>Para nuestros 10 meses...</h2>
             <div class="contador-container">
-                <div class="tiempo-item"><span class="numero" id="dias-8">0</span>Días</div>
-                <div class="tiempo-item"><span class="numero" id="horas-8">0</span>Hrs</div>
-                <div class="tiempo-item"><span class="numero" id="min-8">0</span>Min</div>
-                <div class="tiempo-item"><span class="numero" id="seg-8">0</span>Seg</div>
+                <div class="tiempo-item"><span class="numero" id="dias-10">0</span>Días</div>
+                <div class="tiempo-item"><span class="numero" id="horas-10">0</span>Hrs</div>
+                <div class="tiempo-item"><span class="numero" id="min-10">0</span>Min</div>
+                <div class="tiempo-item"><span class="numero" id="seg-10">0</span>Seg</div>
             </div>
         </div>
     </div>
@@ -134,7 +103,7 @@
         // --- RELOJES ---
         const fInicio = new Date('2025-11-15T00:00:00');
         const fBoda = new Date('2027-07-15T00:00:00'); 
-        const fOchoMeses = new Date('2026-07-15T00:00:00'); 
+        const fDiezMeses = new Date('2026-09-15T00:00:00'); 
 
         function updateClocks() {
             const ahora = new Date();
@@ -176,76 +145,9 @@
             };
 
             calcFuturo(fBoda, 'b');
-            calcFuturo(fOchoMeses, '8');
+            calcFuturo(fDiezMeses, '10');
         }
         setInterval(updateClocks, 1000);
-
-        // --- JUEGO ---
-        const container = document.getElementById('game-container');
-        let score = 0, gameActive = true;
-
-        function createItem() {
-            if (!gameActive) return;
-            const item = document.createElement('div');
-            item.className = 'game-item';
-            const isHeart = Math.random() > 0.3;
-            item.innerText = isHeart ? '❤️' : '🍎';
-            item.style.left = Math.random() * (container.offsetWidth - 60) + 'px';
-            item.style.top = Math.random() * (container.offsetHeight - 60) + 'px';
-
-            const hit = (e) => {
-                e.preventDefault();
-                isHeart ? score++ : score = Math.max(0, score - 1);
-                document.getElementById('current-score').innerText = score;
-                item.remove();
-                if (score >= 20) {
-                    gameActive = false;
-                    document.getElementById('surprise-image-container').style.display = 'block';
-                    confetti({ particleCount: 150, spread: 70 });
-                }
-            };
-            item.addEventListener('touchstart', hit);
-            item.addEventListener('mousedown', hit);
-            container.appendChild(item);
-            setTimeout(() => item.remove(), 1000);
-        }
-        setInterval(createItem, 750);
-
-// --- LOS 7 TOQUES DEL ANILLO Y NUEVA PREGUNTA REQUISITO ---
-        let toquesAnillo = 0;
-        const mensajesAnillo = [
-            "¿ Jajaja segura que ya te lo sabes ? 💍",
-            " ¿ O no? ",
-            " Igual podrias buscar en otra parte no es asi ? ",
-            " Usted es muy insistente parece mamita ",
-            " Bueno, vamos a darle en el gusto ",
-            "¡Uno más para el final!",
-            "¡DESBLOQUEADO! 🌌 Pregunta especial:"
-        ];
-
-        document.getElementById('boda-anillo').onclick = () => {
-            if (toquesAnillo < 6) {
-                alert(mensajesAnillo[toquesAnillo]);
-                toquesAnillo++;
-            } else if (toquesAnillo === 6) {
-                alert(mensajesAnillo[6]);
-                hacerPreguntaSorpresa();
-                toquesAnillo++; 
-            }
-        };
-
-        function hacerPreguntaSorpresa() {
-            const respuesta = prompt("¿En dónde te gustaría la Sorpresa?\n\nA) Al aire libre\nB) En una parte donde se pueda comer algo rico\n\n(¡Para hacer válido tu premio final cuando estés en Chile, debes mostrar todas las capturas de pantalla de los juegos y Easter Eggs que has sacado a lo largo de todos estos meses cuando estemos en Chile. Ya lo sabes y no lo olvides!)");
-            
-            if (respuesta && (respuesta.toUpperCase() === 'A' || respuesta.toUpperCase() === 'B')) {
-                document.getElementById('premio-ticket').style.display = 'block';
-                confetti({ particleCount: 200, spread: 100, colors: ['#ffeb3b', '#ff4081'] });
-                alert("¡Elección guardada en el corazón! ❤️ Tu ticket de premio ha sido desbloqueado abajo. Saca captura de todo y guárdala muy bien.");
-            } else {
-                alert("Por favor elige una opción válida (A o B) para desbloquear el ticket del premio de este mes 🥺");
-                toquesAnillo = 5; // <--- CORREGIDO: Vuelve a 5 para que el próximo clic sume 1 y sea un 6 directo.
-            }
-        }
     </script>
 </body>
 </html>
