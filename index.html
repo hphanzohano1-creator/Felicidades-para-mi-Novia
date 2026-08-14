@@ -61,12 +61,12 @@
                 "Mi amor bello, ya son 9 meses desde que comenzó esta hermosa historia y un nuevo capítulo con nuestra promesa de matrimonio. Gracias por cada risa, cada momento compartido y por ser la persona con la que quiero construir toda mi vida. Para preparar nuestro próximo gran viaje juntos y nuestra luna de miel, necesito que respondas con calma la siguiente encuesta de películas. ¡Te amo con todo mi corazon mamita, Te Amo María Constanza! 💍✨"
             </p>
 
-            <a href="https://www.youtube.com/watch?v=sKoK3XnTd3g" target="_blank" class="youtube-link">
+            <a href="https://www.youtube.com/watch?v=AMTAQ-AJS4Y" target="_blank" class="youtube-link">
                 🎵 Haz clic aquí para nuestra canción
             </a>
 
             <div style="margin-top: 20px;">
-                <a href="https://docs.google.com/forms/d/1zqeIdj0c0JWabyI3GRJHGTdKEE5HwhE4SSVeft5QeaE/edit" target="_blank" class="action-button">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScTzobgnRtvzvQSltO-rZROK73d8hbcKRat6I-BZ4dE6GEqIQ/viewform?usp=publish-editor" target="_blank" class="action-button">
                     🎬 Responder Encuesta Luna de Miel ✈️
                 </a>
             </div>
@@ -148,6 +148,16 @@
             calcFuturo(fDiezMeses, '10');
         }
         setInterval(updateClocks, 1000);
+
+        // --- CONFETI AL ABRIR LA PÁGINA ---
+        window.onload = function() {
+            confetti({
+                particleCount: 200,
+                spread: 120,
+                origin: { y: 0.5 },
+                colors: ['#ff4081', '#ffeb3b', '#ffffff', '#a83279']
+            });
+        };
     </script>
 </body>
 </html>
